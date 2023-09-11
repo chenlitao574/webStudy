@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人介绍</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./suse.ico">
+</head>
+
+<body>
+
+    <h4>个 &nbsp;&nbsp;人 &nbsp;&nbsp;介 &nbsp;&nbsp;绍</h4>
+    <table>
+        <tr>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xingming"></use>
+                </svg>姓名</th>
+            <td>陈力涛</td>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xingbie"></use>
+                </svg>性别</th>
+            <td>男</td>
+            <td rowspan="2" cellpadding="0">
+                <img src="./images/zp.jpg" width="120" height="120">
+            </td>
+        </tr>
+        <tr>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-banjixinxi"></use>
+                </svg>班级</th>
+            <td>计科20211</td>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhanghao"></use>
+                </svg>学号</th>
+            <td>21101010101</td>
+
+        </tr>
+        <tr>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-dianhuahaoma"></use>
+                </svg>联系电话</th>
+            <td>18235398538</td>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-youxiang"></use>
+                </svg>邮箱</th>
+            <td colspan="3">904479928@qq.com</td>
+        </tr>
+        <tr height="40">
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-aihao"></use>
+                </svg>爱好</th>
+            <td>听音乐</td>
+            <th><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shijian"></use>
+                </svg></th>
+            <td colspan="2">
+                <div class="time"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        const div = document.querySelector('div')
+        function getMyDate() {
+            const date = new Date()
+            let h = date.getHours()
+            let m = date.getMinutes()
+            let s = date.getSeconds()
+            h = h < 10 ? '0' + h : h
+            m = m < 10 ? '0' + m : m
+            s = s < 10 ? '0' + s : s
+            return `现在是: ${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}号 ${h}:${m}:${s}`
+        }
+
+        div.innerHTML = getMyDate()
+        setInterval(function () {
+            div.innerHTML = getMyDate()
+        }, 1000)
+    </script>
+    <script src="./fonts/iconfont.js"></script>
+</body>
+
+</html>
